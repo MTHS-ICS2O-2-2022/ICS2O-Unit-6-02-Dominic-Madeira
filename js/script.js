@@ -6,6 +6,14 @@
 
 "use strict"
 
+function myCookies() {
+  if (localStorage.cookies){
+    localStorage.cookies = Number(localStorage.cookies) + 1
+  } else {
+    localStorage.cookies = 1
+  } document.getElementById("answer").innerHTML = localStorage.cookies
+}
+
 function myButtonClicked() {
   alert("Calculation Failed!!")
 }
