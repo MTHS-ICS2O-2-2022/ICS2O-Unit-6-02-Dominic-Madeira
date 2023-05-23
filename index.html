@@ -1,33 +1,27 @@
 <!DOCTYPE html>
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="My first PWA" />
-  <meta name="keywords" content="mths, ics2o" />
-  <meta name="author" content="Dominic M." />
-  <meta name="theme-color" content="#FFFFFF" />
-  <title>Cookie Clicker</title>
-  <link rel="canonical" href="https://mths-ics2o-2-2022.github.io/ICS2O-Unit-6-02-Dominic-Madeira/" />
-  <link rel="manifest" href="/ICS2O-Unit-6-02-Dominic-Madeira/manifest.webmanifest" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <!--- None blocking for Lighthouse report --->
-  <!--- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously --->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="none"
-    onload="if(media!='all')media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  </noscript>
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.yellow-cyan.min.css" media="none"
-    onload="if(media!='all')media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.yellow-cyan.min.css" />
-  </noscript>
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-</head>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="My first webpage, with JavaScript" />
+    <meta name="keywords" content="mths, ics2o" />
+    <meta name="author" content="Dominic M." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.yellow-cyan.min.css"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <!-- This is the title of the webpage -->
+    <title>Cookie Clicker</title>
+  </head>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
@@ -39,41 +33,17 @@
         </div>
       </header>
       <main class="mdl-layout__content">
+        <div class="page-content">
+          <!--This is the text-->
+          Click the Cookie.
+          <br />
+          <div id="answer"></div>
+        </div>
         <div>
-          <img src="./images/cookie-png-5004.png" alt="cookie" />
+          <img src="./images/cookie-png-5004.png" alt="cookie" width="500" height="500" onclick="myButtonClicked()"/>
         </div>
-        <form action="#">
-          <div class="page-content">
-            <!--This is the text-->
-            Click the button.
-          </div>
-          <div class="mdl-textfield mdl-js-textfield">
-            <!--This is where they type in the answer-->
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="age-entered"
-            />
-            <label class="mdl-textfield__label" for="age-entered"
-              >Enter a number ...</label
-            >
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
-        <br />
-        <!-- Colored raised button -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
-          onclick="myButtonClicked()"
-        >
-          Calculate
-        </button>
         <br />
         <br />
-        <div class="page-content-answer">
-          <div id="answer">The answer is: ...</div>
-        </div>
       </main>
     </div>
   </body>
