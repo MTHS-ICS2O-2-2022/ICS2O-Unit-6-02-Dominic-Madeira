@@ -7,7 +7,7 @@
 "use strict"
 
 function myCookies() {
-  if (localStorage.clicks){
+  if (localStorage.clicks) {
     localStorage.clicks = Number(localStorage.clicks)
   } else {
     localStorage.clicks = 1
@@ -18,5 +18,5 @@ function myCookies() {
 function myButtonClicked() {
   localStorage.clicks = Number(localStorage.clicks) + 1
 
-  document.getElementById('clicks').innerHTML = localStorage.clicks
+  document.getElementById("clicks").innerHTML = localStorage.clicks
 }
