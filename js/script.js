@@ -1,19 +1,22 @@
 // Copyright (c) 2023 Dominic M. All rights reserved
 //
 // Created by: Dominic M.
-// Created on: Sep 2020
+// Created on: May 2023
 // This file contains the JS functions for index.html
 
 "use strict"
 
 function myCookies() {
-  if (localStorage.cookies){
-    localStorage.cookies = Number(localStorage.cookies) + 1
+  if (localStorage.clicks){
+    localStorage.clicks = Number(localStorage.clicks)
   } else {
-    localStorage.cookies = 1
-  } document.getElementById("answer").innerHTML = localStorage.cookies
+    localStorage.clicks = 1
+  }
+  document.getElementById("clicks").innerHTML = localStorage.clicks
 }
 
 function myButtonClicked() {
-  alert("Calculation Failed!!")
+  localStorage.clicks = Number(localStorage.clicks) + 1
+
+  document.getElementById('clicks').innerHTML = localStorage.clicks
 }
